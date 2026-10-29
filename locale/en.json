@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Conversation Cost & Balance",
+    "description": "Shows this conversation's estimated spend and the account balance beside the composer; click for the token and balance breakdown."
+  }
+}

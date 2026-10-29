@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Cost & Balance",
+    "zh": "费用与余额"
+  },
+  "description": {
+    "en": "Community plugins that surface spend and account balance in the DSH composer.",
+    "zh": "在 DSH 输入框旁显示花费与账户余额的社区插件。"
+  },
+  "metadata": {
+    "categories": {
+      "monitoring": {
+        "title": {
+          "en": "Monitoring",
+          "zh": "监控"
+        }
+      }
+    },
+    "labels": {
+      "cost": {
+        "title": {
+          "en": "Cost",
+          "zh": "费用"
+        }
+      },
+      "balance": {
+        "title": {
+          "en": "Balance",
+          "zh": "余额"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-cost-balance-chip",
+      "title": {
+        "en": "Conversation Cost & Balance",
+        "zh": "对话费用与余额"
+      },
+      "description": {
+        "en": "Shows this conversation's estimated spend and the account's available balance beside the composer, with a click-through token and cost breakdown.",
+        "zh": "在输入框右侧显示本次对话的预估花费与账户可用余额，点击可查看 Token 与费用明细。"
+      },
+      "icon": "icon.svg",
+      "author": "jieyu",
+      "homepage": "https://github.com/jieyueriluo/DSH_balance-chip#readme",
+      "repository": {
+        "url": "https://github.com/jieyueriluo/DSH_balance-chip"
+      },
+      "metadata": {
+        "category": "monitoring",
+        "labels": ["cost", "balance"]
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1793272196,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.3"
+          }
+        }
+      ]
+    }
+  ]
+}

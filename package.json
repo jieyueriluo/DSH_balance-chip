@@ -1,0 +1,66 @@
+{
+  "name": "dsh-cost-balance-chip",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A DSH composer chip for this conversation's estimated spend and the account balance, with a token breakdown panel.",
+  "license": "MIT",
+  "author": "dsh-cost-balance-chip contributors",
+  "homepage": "https://github.com/jieyueriluo/DSH_balance-chip#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jieyueriluo/DSH_balance-chip.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jieyueriluo/DSH_balance-chip/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "deepseek",
+    "deepseek-harness",
+    "cordis",
+    "cost",
+    "balance",
+    "token-usage"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.3"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\"",
+    "prepack": "node --test \"tests/*.test.mjs\""
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
